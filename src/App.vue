@@ -1,17 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="flex">
+    <div class="bg-gray-800 text-white w-64 space-y-6 py-7 px-2">
+      <h1 class="text-xl font-bold">Dashboard</h1>
+      <nav>
+        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"
+          >Users</a
+        >
+        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"
+          >Reports</a
+        >
+        <!-- Add more links as needed -->
+      </nav>
+    </div>
+
+    <div class="flex-1 p-10">
+      <div class="bg-white p-5 rounded-lg shadow">
+        <h2 class="text-lg font-semibold">Statistics</h2>
+        <p>Registered Users: <span id="userCount">0</span></p>
+        <p>Active Requests: <span id="activeRequests">0</span></p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: {},
+};
 </script>
 
 <style>
